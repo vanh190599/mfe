@@ -1,0 +1,22 @@
+<div style="width: 600px; padding: 10px; margin: auto">
+  <!--  Login as: {{ appService.loggedUser?.username }}-->
+  <!--  <button (click)="logout()">Logout</button>-->
+  <!--  -->
+  <div>
+    <a routerLink="/angular">angular</a>
+    <button>Angular 1</button> &nbsp;
+    <button>Angular 2</button> &nbsp;
+    <button>Vue</button> &nbsp;
+    <button>React</button> &nbsp;
+  </div>
+  <hr/>
+  <div class="container">
+    <h2>App shell</h2>
+    <ng-container #comp *ngFor="let item of loaders" [ngSwitch]="item.framework">
+      <app-react-wrapper *ngSwitchCase="'react'" [component]="item.component"></app-react-wrapper>
+      <app-vue-wrapper *ngSwitchCase="'vue'" [component]="item.component"></app-vue-wrapper>
+      <app-angular-wrapper *ngSwitchDefault [component]="item.component"></app-angular-wrapper>
+    </ng-container>
+  </div>
+
+</div>

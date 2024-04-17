@@ -1,0 +1,21 @@
+<div style="width: 600px; padding: 10px; margin: auto">
+  <div>
+    <a routerLink="/main2" [queryParams]="{ app: 'angular1' }"><button>Angular 1</button></a> &nbsp;
+    <a routerLink="/main2" [queryParams]="{ app: 'angular2' }"><button>Angular 2</button></a> &nbsp;
+    <button disabled>Vue</button> &nbsp;
+    <button disabled>React</button> &nbsp;
+  </div>
+  <hr/>
+  <div class="container">
+    <h2>App shell</h2>
+    <app-angular-1-wrapper *ngIf="queryParams.app === 'angular1'"></app-angular-1-wrapper>
+    <app-angular-2-wrapper *ngIf="queryParams.app === 'angular2'"></app-angular-2-wrapper>
+
+
+    <ng-container *ngIf="!queryParams.app">
+      <app-angular-1-wrapper></app-angular-1-wrapper>
+      <br>
+      <app-angular-2-wrapper></app-angular-2-wrapper>
+    </ng-container>
+  </div>
+</div>
