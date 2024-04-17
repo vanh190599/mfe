@@ -51,8 +51,6 @@ export class Main2Component {
 
   async ngAfterViewInit() {
     console.log("-- MainComponent:")
-    console.log(this.appService.authorized_modules)
-    this.appService.authorized_modules = remoteModules;
 
     for (const m of remoteModules) {
       loadRemoteModule(m).then((module) => {

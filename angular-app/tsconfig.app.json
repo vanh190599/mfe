@@ -11,5 +11,6 @@
   "include": [
     "src/**/*.d.ts",
     "src/app/loader.ts",
+    "src/app/remote-routes.ts",
   ]
 }
