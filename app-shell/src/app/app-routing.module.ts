@@ -14,7 +14,7 @@ const routes: Routes = [
     component: Main2Component
   },
   {
-    path: 'mfe1',
+    path: 'mfe',
     loadChildren: () =>
       loadRemoteModule({
         remoteEntry: 'http://localhost:3001/remoteEntry.js',
@@ -33,10 +33,10 @@ const routes: Routes = [
     path: 'main',
     component: MainComponent,
   },
-  {
-    path: '**',
-    redirectTo: 'main'
-  },
+  // {
+  //   path: '**',
+  //   redirectTo: 'main'
+  // },
 ];
 
 @NgModule({

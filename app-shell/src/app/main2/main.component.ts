@@ -42,7 +42,6 @@ export class Main2Component {
   loaders: any = [];
   queryParams: any;
 
-
   constructor(readonly appService: AppService, private route: ActivatedRoute) {
     this.route.queryParams.subscribe(params => {
       this.queryParams = params;

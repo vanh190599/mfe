@@ -11,6 +11,7 @@
   "include": [
     "src/**/*.d.ts",
     "src/app/loader.ts",
-    "src/app/remote-routes.ts",
+    "src/app/remote-routes.ts", // load for share route
+    "src/app/standalone-component.route.ts", // load for share route
   ]
 }
