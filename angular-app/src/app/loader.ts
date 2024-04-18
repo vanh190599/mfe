@@ -1,9 +1,9 @@
-import { AppComponent } from './app.component';
+/*import { AppComponent } from './app.component';
 
 export default {
   framework: 'angular',
   component: AppComponent
-}
+}*/
 
 // const appWidgetLoader = {
 //   config: {
@@ -57,3 +57,16 @@ export default {
 // export {
 //   appWidgetLoader,
 // };
+
+
+
+// app widget loader
+const appWidgetLoader = {
+  module: {
+    key: 'AppModule',
+    // loader: () => import('./app.module'),
+  }
+}
+export {
+  appWidgetLoader
+}

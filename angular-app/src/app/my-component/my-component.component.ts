@@ -11,5 +11,7 @@ import {RouterLink} from "@angular/router";
   styleUrls: ['./my-component.component.scss']
 })
 export class MyComponentComponent {
-
+  constructor() {
+    console.log("-- MyComponentComponent")
+  }
 }

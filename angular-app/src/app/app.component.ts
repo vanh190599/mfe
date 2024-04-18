@@ -11,14 +11,6 @@ import {Router} from "@angular/router";
 export class AppComponent {
   myLogo = logo
 
-  constructor(private router: Router) {
-    console.log('app1 - components')
-  }
-
-  navigateToMy() {
-    //this.router.navigateByUrl('/standalone/by').then(r => {}); // Đường dẫn đến route 'home'
-    this.router.navigate(['/standalone/my']).then(r => {
-      console.log('navigateToMy')
-    }); // Sử dụng navigate
+  constructor() {
   }
 }
