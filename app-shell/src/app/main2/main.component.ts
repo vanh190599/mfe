@@ -3,7 +3,7 @@ import {loadRemoteModule} from '../utils/federation-utils';
 import {AppService} from '../app.service';
 import {AngularWrapperComponent1} from "../app-comp/angular-wrapper/angular-wrapper.component";
 import {AngularWrapperComponent2} from "../app-comp/angular-2-wrapper/angular-wrapper.component";
-import {ActivatedRoute, RouterLink} from "@angular/router";
+import {ActivatedRoute, Router, RouterLink} from "@angular/router";
 import {NgIf} from "@angular/common";
 
 const remoteModules = [
@@ -42,19 +42,38 @@ export class Main2Component {
   loaders: any = [];
   queryParams: any;
 
-  constructor(readonly appService: AppService, private route: ActivatedRoute) {
+  // route remote
+  remote : any;
+
+  constructor(readonly appService: AppService,
+              private route: ActivatedRoute,
+              private router: Router) {
     this.route.queryParams.subscribe(params => {
       this.queryParams = params;
     });
   }
 
   async ngAfterViewInit() {
-    console.log("-- MainComponent:")
+    // console.log("-- MainComponent:")
+    //
+    // for (const m of remoteModules) {
+    //   loadRemoteModule(m).then((module) => {
+    //     this.loaders.push(module.default);
+    //   });
+    // }
 
-    for (const m of remoteModules) {
-      loadRemoteModule(m).then((module) => {
-        this.loaders.push(module.default);
-      });
-    }
+
+    const remote = {
+      remoteEntry: 'http://localhost:3001/remoteEntry.js',
+      remoteName: 'angular_app',
+      exposedModule: 'AngularAppLoader',
+    };
+
+    loadRemoteModule(remote).then((module) => {
+      console.log(module)
+      // this.loaders.push(module.default);
+    });
+
+
   }
 }

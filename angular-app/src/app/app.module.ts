@@ -13,6 +13,10 @@ const routes: Routes = [
       import('./standalone-component.route')
         .then(m => m.STANDALONE_COMPONENTS_ROUTES)
   },
+  {
+    path: 'card',
+    component: CardComponent,
+  }
 ];
 
 // const routes: Routes = [
