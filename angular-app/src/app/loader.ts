@@ -63,8 +63,8 @@ export default {
 // app widget loader
 const appWidgetLoader = {
   module: {
-    key: 'AppModule',
-    // loader: () => import('./app.module'),
+    export: 'FeatureMFEModule', // must match exact module class name
+    loader: () => import('./feature-mfe/feature-mfe.module'),
   }
 }
 export {

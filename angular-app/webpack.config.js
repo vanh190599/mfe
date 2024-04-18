@@ -24,9 +24,7 @@ module.exports = {
       name: "angular_app",
       filename: "remoteEntry.js",
       exposes: {
-        // AngularAppLoader: "./src/app/loader.ts",/
-        AngularAppLoader: "./src/app/app.module.ts",
-        AngularAppRoute: "./src/app/standalone-component.route.ts",
+        AngularAppLoader: "./src/app/loader.ts",
       },
       shared: {
         "@angular/core": { singleton: true },
