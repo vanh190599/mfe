@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  app-shell:
+    ports:
+      - "4200:4200"
+    build:
+      context: ./app-shell
+      dockerfile: .DockerFile
+  vue-app:
+    ports:
+      - "3000:3000"
+    build:
+      context: ./vue-app
+      dockerfile: .DockerFile
