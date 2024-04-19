@@ -6,6 +6,7 @@ import {AuthGuard} from './auth.guard';
 import {Main2Component} from "./main2/main.component";
 import {AngularWrapperComponent2} from "./app-comp/angular-2-wrapper/angular-wrapper.component";
 import {loadRemoteModule} from "./utils/federation-utils";
+import {WrapperStateComponent} from "./wrapper-state/wrapper-state.component";
 // import { loadRemoteModule } from '@angular-architects/module-federation';
 
 // import remoteAngular1Routes from 'app2/routes';
@@ -58,6 +59,11 @@ const routes: Routes = [
   //   path: '**',
   //   redirectTo: 'main'
   // },
+  {
+    path: 'wrapper-state',
+    component: WrapperStateComponent,
+  }
+
 ];
 
 @NgModule({

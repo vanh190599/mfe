@@ -10,6 +10,7 @@ import { ReactWrapperComponent } from './wrappers/react-wrapper/react-wrapper.co
 import { VueWrapperComponent } from './wrappers/vue-wrapper/vue-wrapper.component';
 import { AngularWrapperComponent } from './wrappers/angular-wrapper/angular-wrapper.component';
 import {Angular2WrapperComponent} from "./wrappers/angular-2-wrapper/angular-2-wrapper.component";
+import { WrapperStateComponent } from './wrapper-state/wrapper-state.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import {Angular2WrapperComponent} from "./wrappers/angular-2-wrapper/angular-2-w
     VueWrapperComponent,
     AngularWrapperComponent,
     Angular2WrapperComponent,
+    WrapperStateComponent,
 
   ],
   imports: [

@@ -36,6 +36,10 @@ module.exports = {
         "@angular/common": { singleton: true },
         "@angular/router": { singleton: true },
         "@angular/common/http": { singleton: true },
+        // state
+        '@ngrx/store': { singleton: true, eager: true },
+        '@ngrx/router-store': { singleton: true, eager: true },
+        'mdmf-shared': { singleton: true, eager: true },
       },
     }),
   ],

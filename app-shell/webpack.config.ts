@@ -18,6 +18,11 @@ module.exports = {
         '@angular/core': { eager: true, singleton: true }, // Chia sẻ Angular Core
         '@angular/common': { eager: true, singleton: true },
         '@angular/router': { eager: true, singleton: true },
+
+        '@ngrx/store': { singleton: true, eager: true },
+        '@ngrx/router-store': { singleton: true, eager: true },
+        'mdmf-shared': { singleton: true, eager: true },
+
         vue: {
           eager: true,
           singleton: true,
