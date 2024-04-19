@@ -1,14 +1,14 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
-import { RouterModule, RouterOutlet, Routes } from '@angular/router';
-import { CardComponent } from './card/card.component';
-import { STANDALONE_COMPONENTS_ROUTES } from './remote-routes';
-import { MainComponent } from './main/main.component';
-import { MyComponentComponent } from './my-component/my-component.component';
-import { NotFoundComponent } from './not-found/not-found.component';
-import { FeatureMFEModule } from './feature-mfe/feature-mfe.module';
+import {AppComponent} from './app.component';
+import {RouterModule, RouterOutlet, Routes} from '@angular/router';
+import {CardComponent} from './card/card.component';
+import {STANDALONE_COMPONENTS_ROUTES} from './remote-routes';
+import {MainComponent} from './main/main.component';
+import {MyComponentComponent} from './my-component/my-component.component';
+import {NotFoundComponent} from './not-found/not-found.component';
+import {FeatureMFEModule} from './feature-mfe/feature-mfe.module';
 
 const routes: Routes = [
   {
@@ -31,8 +31,8 @@ const routes: Routes = [
       ),
   },
   {
-    path: 'feature-mfe',
-    loadChildren: () =>FeatureMFEModule
+    path: '',
+    loadChildren: () => FeatureMFEModule
   },
   {
     path: '**',
