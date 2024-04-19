@@ -9,21 +9,24 @@ import { MainComponent } from './main/main.component';
 import { ReactWrapperComponent } from './wrappers/react-wrapper/react-wrapper.component';
 import { VueWrapperComponent } from './wrappers/vue-wrapper/vue-wrapper.component';
 import { AngularWrapperComponent } from './wrappers/angular-wrapper/angular-wrapper.component';
+import {Angular2WrapperComponent} from "./wrappers/angular-2-wrapper/angular-2-wrapper.component";
 
 @NgModule({
-    declarations: [
-        AppComponent,
-        LoginComponent,
-        MainComponent,
-        ReactWrapperComponent,
-        VueWrapperComponent,
-        AngularWrapperComponent
-    ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        FormsModule
-    ],
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    MainComponent,
+    ReactWrapperComponent,
+    VueWrapperComponent,
+    AngularWrapperComponent,
+    Angular2WrapperComponent,
+
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+  ],
     providers: [],
     exports: [
         AngularWrapperComponent
