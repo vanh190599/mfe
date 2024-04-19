@@ -54,26 +54,15 @@ export class Main2Component {
   }
 
   async ngAfterViewInit() {
-    // console.log("-- MainComponent:")
+    // const remote = {
+    //   remoteEntry: 'http://localhost:3001/remoteEntry.js',
+    //   remoteName: 'angular_app',
+    //   exposedModule: 'AngularAppLoader',
+    // };
     //
-    // for (const m of remoteModules) {
-    //   loadRemoteModule(m).then((module) => {
-    //     this.loaders.push(module.default);
-    //   });
-    // }
-
-
-    const remote = {
-      remoteEntry: 'http://localhost:3001/remoteEntry.js',
-      remoteName: 'angular_app',
-      exposedModule: 'AngularAppLoader',
-    };
-
-    loadRemoteModule(remote).then((module) => {
-      console.log(module)
-      // this.loaders.push(module.default);
-    });
-
-
+    // loadRemoteModule(remote).then((module) => {
+    //   console.log(module)
+    //   // this.loaders.push(module.default);
+    // });
   }
 }

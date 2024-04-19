@@ -1,4 +1,4 @@
-<div style="width: 600px; padding: 10px; margin: auto">
+<div style="">
   <div class="container">
     <div>
       <a routerLink="/main2" [queryParams]="{ app: 'angular1' }"><button>Angular 1</button></a> &nbsp;
@@ -9,7 +9,6 @@
     </div>
     <hr/>
 
-    <h2>shell: Main2 component</h2>
     <app-angular-1-wrapper *ngIf="queryParams.app === 'angular1'"></app-angular-1-wrapper>
     <app-angular-2-wrapper *ngIf="queryParams.app === 'angular2'"></app-angular-2-wrapper>
 

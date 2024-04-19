@@ -24,14 +24,12 @@ export class AngularWrapperComponent1 {
     const module = {
       remoteEntry: 'http://localhost:3001/remoteEntry.js',
       remoteName: 'angular_app',
-      exposedModule: 'AngularAppLoader',
+      exposedModule: 'AngularAppComponent',
     };
 
     loadRemoteModule(module).then((module) => {
-      this.viewContainerRef.createComponent((module.default).component, {});
+      console.log(module.AppComponent)
+      this.viewContainerRef.createComponent(module.AppComponent, {});
     });
-
-    // Tạo một instance của component được truyền vào và đặt nó vào trong view container
-    // const compRef = this.viewContainerRef.createComponent(this.component, {});
   }
 }

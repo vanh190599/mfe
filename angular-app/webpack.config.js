@@ -24,8 +24,12 @@ module.exports = {
       name: "angular_app",
       filename: "remoteEntry.js",
       exposes: {
+        // test expose module, with metadata
         AngularAppLoader: "./src/app/loader.ts",
-        AngularAppRoute: "./src/app/standalone-component.route.ts"
+        // test expose route
+        AngularAppRoute: "./src/app/standalone-component.route.ts",
+        // test expose component
+        AngularAppComponent: "./src/app/app.component.ts"
       },
       shared: {
         "@angular/core": { singleton: true },
